@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>gogoro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.css"/>
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="content">
+    <nav id="navbar" class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target="#nav-menu">
+                    <div class="btn-icon">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </div>
+                </button>
+                <a id="ggr-logo" class="navbar-brand" href="#">gogoro</a>
+            </div>
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="nav navbar-nav" id="fullpage-menu">
+                    <li data-menuanchor="page1" class="active">
+                        <a href="#page1">搜索Gogoro</a>
+                    </li>
+                    <li data-menuanchor="page2"><a href="#page2">GogoroS</a></li>
+                    <li data-menuanchor="page2"><a href="#page2">能源网路</a></li>
+                    <li data-menuanchor="page2"><a href="#page2">搜寻据点</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section section1 active jumbotron">
+            <div class="slide slide1 text-center">
+                <h1>正式进驻高雄</h1>
+                <p>中山店盛大开幕！购车享好礼！</p>
+                <button type="button" class="btn" role="button">即刻预约</button>
+            </div>
+            <div class="slide slide2 text-center">
+                <h1>前進府城台南</h1>
+                <p>台南加碼！申請 $27,000 購車補助！</p>
+                <button type="button" class="btn" role="button">即刻了解</button>
+            </div>
+            <div class="slide slide3 text-center">
+                <h1>遙遙領先</h1>
+                <h1>默默出色</h1>
+                <p>台南加碼！申請 $27,000 購車補助！</p>
+                <button type="button" class="btn" role="button">了解更多</button>
+            </div>
+        </div>
+        <div class="section section2">
+            <div class="bg"></div>
+            <div class="ss-icon"></div>
+            <div class="pic"></div>
+            <div class="container text-center">
+                <h1>急速耀眼</h1>
+                <p>
+                    無數細節只為實現你對極致性能的渴望。快如閃電、流暢滑順、靈活敏捷，騎乘的五感驚豔，從此躍入全新里程碑。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/vendors/jquery.easings.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/move.js/0.5.0/move.min.js"></script>
+<script>
+    $(function () {
+        $('#fullpage').fullpage({
+            menu: '#fullpage-menu',
+            paddingTop: 100,
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            verticalCentered: false,
+            navigation: true,
+            controlArrows: false,
+            slidesNavigation: true,
+            /**
+             * 滚动到某一幻灯片后的回调函数，与afterLoad类似
+             * @param anchorLink
+             * @param index
+             * @param slideAnchor
+             * @param slideIndex
+             */
+            afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                if (index === 1) {
+                }
+            },
+            onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
+                if (index === 1) {
+                    switch (slideIndex) {
+                        case 0:
+                            move('#fullpage .section1 .slide1').set('opacity', '0').end();
+                            move('#fullpage .section1').set('opacity', '0').end();
+                            break;
+                        case 1:
+                            move('#fullpage .section1 .slide2').set('opacity', '0').end();
+                            move('#fullpage .section1').set('opacity', '0').end();
+                            break;
+                        case 2:
+                            move('#fullpage .section1 .slide3').set('opacity', '0').end();
+                            move('#fullpage .section1').set('opacity', '0').end();
+                            break;
+                    }
+                    switch (nextSlideIndex) {
+                        case 0:
+                            $('#fullpage .section1').css({
+                                'background-image': 'url("http://www.gogoro.com/app/uploads/2016/04/S8Q7569.png")',
+                            });
+                            move('#fullpage .section1').ease('in-out').set('opacity', '1').end();
+                            move('#fullpage .section1 .slide1').set('opacity', '1').end();
+                            break;
+                        case 1:
+                            $('#fullpage .section1').css({
+                                'background-image': 'url("http://www.gogoro.com/app/uploads/2016/08/A_banner_TN-2.jpg")',
+                            });
+                            move('#fullpage .section1').ease('in-out').set('opacity', '1').end();
+                            move('#fullpage .section1 .slide2').set('opacity', '1').end();
+                            break;
+                        case 2:
+                            $('#fullpage .section1').css({
+                                'background-image': 'url("http://www.gogoro.com/app/uploads/2016/08/A_banner_S-4.jpg")',
+                            });
+                            move('#fullpage .section1').ease('in-out').set('opacity', '1').end();
+                            move('#fullpage .section1 .slide3').set('opacity', '1').end();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            },
+            afterLoad: function (anchorLink, index) {
+                switch (index) {
+                    case 1:
+                        break;
+                    case 2:
+                        setTimeout(function () {
+                            move('#fullpage .section2 .pic').set('opacity', '1').duration('4s').end();
+                            move('#fullpage .section2 .pic').scale(0.9).duration('4s').end();
+                        }, 500);
+                        move('#fullpage .section2 .ss-icon').set('opacity', '1').duration('4s').end();
+                        move('#fullpage .section2 .ss-icon').scale(0.9).duration('4s').end();
+                        break;
+                }
+            },
+            onLeave: function (index, nextIndex, direction) {
+                switch (index) {
+                    case 1:
+                        break;
+                    case 2:
+                        move('#fullpage .section2 .pic').set('opacity', '0').end();
+                        move('#fullpage .section2 .pic').scale(1).end();
+                        move('#fullpage .section2 .ss-icon').set('opacity', '0').end();
+                        move('#fullpage .section2 .ss-icon').scale(1).end();
+                        break;
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>

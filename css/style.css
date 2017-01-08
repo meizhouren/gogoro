@@ -1,0 +1,132 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 999;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+}
+
+#nav-menu a {
+    color: white;
+    background-color: transparent;
+}
+
+#nav-menu a:hover {
+    color: aqua;
+    background-color: transparent;
+}
+
+.container {
+    max-width: 940px;
+}
+
+#ggr-logo {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    width: 100px;
+    padding: 0px;
+    margin-right: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#nav-menu li {
+    margin-left: 40px;
+}
+
+#fullpage .section1 {
+    background-image: url("http://www.gogoro.com/app/uploads/2016/04/S8Q7569.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#fullpage .section1 button {
+    background: transparent;
+    border-radius: 20px;
+    border: white solid 1px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+#fullpage .section1 h1, p, button{
+    margin: 20px auto;
+}
+
+#fullpage .section1 button:hover {
+    color: black;
+    background: white;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+}
+
+
+#fullpage .section1 .slide1 {
+    opacity: 1;
+}
+
+#fullpage .section1 .slide2 {
+    opacity: 0;
+}
+
+#fullpage .section1 .slide3 {
+    opacity: 0;
+}
+
+/* --------------------section2------------------------*/
+#fullpage .section2 {
+    background-image: url("http://www.gogoro.com/img/gogoro-s/performance/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#fullpage .section2 .container {
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    text-align: center;
+    bottom: 5px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#fullpage .section2 .ss-icon {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 30px;
+    height: 70%;
+    background-image: url("http://www.gogoro.com/img/gogoro-s/performance/hero-s.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    opacity: 0;
+}
+
+#fullpage .section2 .pic {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 30px;
+    height: 70%;
+    background-image: url("http://www.gogoro.com/img/gogoro-s/performance/hero-scooter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    opacity: 0;
+}
