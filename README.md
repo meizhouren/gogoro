@@ -9,4 +9,5 @@
   <li>你可以使用<textarea><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script></textarea>
   </li>
   <li>你需要导入jquery.fullpage.js或者jquery.fullpage.min.js，jquery.fullpage.css</li>
-  <li>当你使用css3: false，你可以加入<a href="http://jqueryui.com/">jQuery UI library</a>
+  <li>当你使用css3: false，你可以加入<a href="http://jqueryui.com/">jQuery UI library</a></li>
+  <img src="https://github.com/zhangxieliu/gogoro/blob/master/file/gogo.gif">
